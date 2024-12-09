@@ -383,11 +383,11 @@ var isCompatible = function(detailedException) {
     checkFeature('XMLHttpRequest 2', function() {
       return 'XMLHttpRequest' in global && 'withCredentials' in new global.XMLHttpRequest();
     });
-    checkFeature('ES5 strict', function() {
-      return function() { /* "use strict";*/
-        return typeof this == 'undefined';
-      }();
-    });
+    // checkFeature('ES5 strict', function() {
+    //   return function() { /* "use strict";*/
+    //     return typeof this == 'undefined';
+    //   }();
+    // });
     checkFeature('CSS borderRadius', function() {
       return typeof global.document.body.style['borderRadius'] != 'undefined';
     });
